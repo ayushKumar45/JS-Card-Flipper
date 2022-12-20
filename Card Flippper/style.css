@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.game-container{
+    height: 80vh; 
+    max-width: 800px;
+    display: none;
+    gap: 10px;
+    grid-template-columns: repeat(3,minmax(50px,1fr));
+    grid-template-rows: repeat(auto-fit,minmax(50px,1fr));
+}
+.card{
+    background-color: rgb(64, 187, 64);
+    padding: 10px;
+    cursor: pointer;
+    /* width: 250px;
+    height: 250px; */
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+}
+img.revealed{
+    opacity: 1;
+}
+#won{
+    font-size: 40px;
+    background-color: rgb(245, 186, 97);
+    width: 450px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+#won button:active{
+    transform: translateY(2px);
+}
+#won label{
+    font-size: 20px;
+    text-align: center;
+}
+#won .no-of-cards{
+    /* border: solid; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    margin: 2px;
+}
+#won .no-of-cards .card-no{
+    background-color: rgb(255, 210, 141);
+    width: 15%;
+    height: 25px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px rgb(238, 172, 74);
+}
+#won .no-of-cards .card-no:active{
+    transform: translateY(5px);
+}
